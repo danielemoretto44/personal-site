@@ -1,0 +1,197 @@
+%------------------------------------------------------------
+% CV – Daniele Moretto
+% Style inspired by Nicolò Crescenzio's CV
+% Requires: geometry, titlesec, enumitem, hyperref, fontawesome5,
+%           xcolor, parskip, array, tabularx, microtype
+%------------------------------------------------------------
+\documentclass[10pt, a4paper]{article}
+ 
+% ── Packages ────────────────────────────────────────────────
+\usepackage[
+  top=1.8cm, bottom=1.8cm,
+  left=2.0cm, right=2.0cm
+]{geometry}
+\usepackage{fontawesome5}          % icons
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+ 
+% ── Colours ─────────────────────────────────────────────────
+\definecolor{accent}{HTML}{2E4057}   % dark slate blue
+\definecolor{lightgray}{HTML}{666666}
+ 
+% ── Hyperref setup ──────────────────────────────────────────
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = accent,
+  linkcolor  = accent
+}
+ 
+% ── Section headings ────────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0em}{}
+  [\vspace{-0.4em}\textcolor{accent}{\rule{\linewidth}{0.6pt}}\vspace{0.2em}]
+ 
+\titlespacing{\section}{0pt}{1.2em}{0.4em}
+ 
+% ── No page numbers ─────────────────────────────────────────
+\pagestyle{empty}
+ 
+% ── Timeline entry helper ───────────────────────────────────
+% \entry{date range}{Title}{Institution}{Description bullets}
+\newcommand{\entry}[4]{%
+  \begin{tabular}{@{}p{3.2cm} p{12.0cm}@{}}
+    \raggedright\small\textcolor{lightgray}{#1} &
+    \begin{minipage}[t]{12.0cm}
+      \textbf{#2}\\
+      \textit{#3}
+      #4
+    \end{minipage}
+  \end{tabular}%
+  \vspace{0.55em}
+}
+ 
+% ── Compact bullet list inside entries ──────────────────────
+\newenvironment{entrylist}{%
+  \begin{itemize}[leftmargin=1em, itemsep=0pt, topsep=2pt, parsep=0pt]
+}{%
+  \end{itemize}
+}
+ 
+%============================================================
+\begin{document}
+ 
+%------------------------------------------------------------
+% HEADER
+%------------------------------------------------------------
+\begin{center}
+  {\LARGE\bfseries Daniele Moretto}\\[0.5em]
+  \textcolor{lightgray}{
+    \faMapMarker*\enspace Via Marzolo, 9 - 35131 Padova (PD), Italy
+    \quad
+    \faPhone*\enspace +39 328 3763380
+  }\\[0.3em]
+  \href{mailto:daniele.moretto.3@phd.unipd.it}{%
+    \faEnvelope\enspace daniele.moretto.3@phd.unipd.it}
+\end{center}
+ 
+\vspace{0.6em}
+ 
+%------------------------------------------------------------
+% ABOUT
+%------------------------------------------------------------
+I am a PhD student in Sciences of Civil, Environmental and Architectural Engineering
+at the University of Padova. My research is focused on numerical methods for coupled
+multi-physics problems in porous media, reservoir simulation, and the development of
+general-purpose computational frameworks for subsurface applications.
+ 
+%------------------------------------------------------------
+% EDUCATION
+%------------------------------------------------------------
+\section{Education}
+ 
+\entry{Oct 2023 – Present}
+  {PhD in Sciences of Civil, Environmental and Architectural Engineering}
+  {Università degli Studi di Padova}
+  {%
+    \begin{entrylist}
+      \item Advisors: Prof.\ Massimiliano Ferronato and Prof.\ Andrea Franceschini.
+    \end{entrylist}
+  }
+ 
+\entry{2021 – 2023}
+  {Master's Degree in Civil Engineering}
+  {Università degli Studi di Padova}
+  {%
+    \begin{entrylist}
+      \item Thesis: \textit{GReS – General Reservoir Simulator: development of a
+        general-purpose simulator for coupled multi-physics reservoir problems}.
+      \item Advisors: Prof.\ Massimiliano Ferronato, Prof.\ Andrea Franceschini.
+      \item Grade: 110/110 \textit{cum laude}.
+    \end{entrylist}
+  }
+ 
+\entry{2018 – 2021}
+  {Bachelor's Degree in Civil Engineering}
+  {Università degli Studi di Padova}
+  {%
+    \begin{entrylist}
+      \item Thesis: \textit{Finite element method for the solution of the
+        mechanical problem in porous media}.
+      \item Advisor: Prof.\ Massimiliano Ferronato.
+      \item Grade: 110/110 \textit{cum laude}.
+    \end{entrylist}
+  }
+ 
+%------------------------------------------------------------
+% RESEARCH & WORK EXPERIENCE
+%------------------------------------------------------------
+\section{Research \& Teaching Experience}
+ 
+\entry{Oct 2023 – Present}
+  {Doctor of Philosophy (PhD)}
+  {Università degli Studi di Padova – DICEA}
+  {%
+    \begin{entrylist}
+      \item Research on numerical algorithms for coupled multiphysics and multidomain simulations in fractured porous media
+    \end{entrylist}
+  }
+ 
+\entry{2024}
+  {Integrated Didactic – Numerical Analysis (laboratory)}
+  {Università degli Studi di Padova}
+  {%
+    \begin{entrylist}
+      \item Teaching assistant for undergraduate numerical analysis laboratory.
+    \end{entrylist}
+  }
+ 
+\entry{2023}
+  {Integrated Didactic – Calculus (exercises)}
+  {Università degli Studi di Padova}
+  {%
+    \begin{entrylist}
+      \item Teaching assistant for undergraduate calculus course.
+    \end{entrylist}
+  }
+ 
+%------------------------------------------------------------
+% JOURNAL PAPERS
+%------------------------------------------------------------
+
+ \input{publications}
+ 
+
+ 
+%------------------------------------------------------------
+% COMPUTER SKILLS
+%------------------------------------------------------------
+\section{Computer Skills}
+ 
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{} p{6cm} p{12.4cm} @{}}
+  \textbf{Coding}     & C++, Python, MATLAB, Bash, \LaTeX \\
+  \textbf{Software and other tools}   & ParaView, Abaqus, Microsoft Office \\
+\end{tabular}
+ 
+%------------------------------------------------------------
+% LANGUAGES
+%------------------------------------------------------------
+\section{Languages}
+ 
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{} p{2.8cm} p{12.4cm} @{}}
+  \textbf{Italian} & Mother Tongue \\
+  \textbf{English} & TOEFL C1 level \\
+\end{tabular}
+ 
+\end{document}

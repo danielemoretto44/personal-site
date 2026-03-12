@@ -1,0 +1,32 @@
+\section{Journal Papers}
+
+\begin{itemize}[leftmargin=1.2em, itemsep=0.5em, topsep=0pt]
+
+\item  Moretto, D., Franceschini, A., Ferronato, M. (2025). A stabilized formulation for the mortar method with non-linear contact constraints. Applications of Mathematics, 70(6), 825-849.
+
+\item Moretto, D., Franceschini, A., Ferronato, M. (2025). A novel mortar method integration using radial basis functions. Computers \& Mathematics with Applications, 198, 38-58.
+ 
+\end{itemize}
+
+
+%------------------------------------------------------------
+% CONFERENCES
+%------------------------------------------------------------
+\section{Contributed Talks to Conferences}
+ 
+\begin{itemize}[leftmargin=1.2em, itemsep=0.5em, topsep=0pt]
+
+\item \textit{GReS: A Novel Multi-Physics and Multi-Domain Prototyping Platform for Coupled Geomechanics in Porous Media} (with A.~Franceschini and M.~Ferronato) Siam conference on mathematical \& computational issues in the geosciences (GS25). Baton Rouge, Louisiana, October 13-17, 2025.
+ 
+  \item \textit{A novel and efficient mortar strategy for multi-physics multi-domain
+    simulations in subsurface applications}
+    (with A.~Franceschini and M.~Ferronato),
+    25th Conference on Computational Methods in Water Resources (CMWR) –
+    Tucson, Arizona, October 1–3, 2024.
+ 
+  \item \textit{A novel quadrature algorithm for mortar method based on Radial
+    Basis functions}
+    (with A.~Franceschini and M.~Ferronato),
+    GIMC SIMAI Young 2024 – Naples, Italy, July 10–12, 2024.
+ 
+\end{itemize}
